@@ -310,8 +310,6 @@ const submit = () => {
             if (Number(input1.value) <= Number(input2.value)) {
                 gallery.style.animation = 'final .5s linear forwards';
                 blackLayer.style.opacity = '0';
-                contador = 0;
-                swiperWrapper.innerHTML = '';
                 filtrado(casas, habitaciones.value, input1.value, input2.value);
                 
             }
@@ -347,6 +345,13 @@ const submit = () => {
     comeBack.addEventListener('click', ()=>{
         gallery.style.animation = 'none'
         blackLayer.style.opacity = '1';
+        contador = 0;
+        let limpiar= document.querySelectorAll('.swiper-slide');
+        for(let i = 0; i < limpiar.length; i ++) {
+            limpiar[i].remove();
+        }
+      
+                
     })
 
 
