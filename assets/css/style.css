@@ -1,0 +1,635 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 20000;
+    
+}
+
+
+.main {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+header {
+
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+
+
+h1 {
+    font-size: 6vw;
+    text-align: left;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px #000;
+    letter-spacing: 2px;
+    padding-left: 3%;
+    animation: appear linear 6s 1s;
+    opacity: 0;
+    text-transform: uppercase;
+    
+}
+
+@keyframes  appear {
+
+    0%, 100% {
+        opacity: 0;
+    }
+
+    30% {
+       opacity: 1;
+    }
+
+    85%{
+        opacity: 1;
+    }
+}
+
+.resena {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    animation: hereIAM 1s linear forwards;
+    opacity: 0;
+    justify-content: space-evenly;
+    height: 45vh;
+    width: 80vw;
+   
+}
+
+.resena h2 {
+    
+    font-size: 3vw;
+    text-align: left;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px #000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+
+.resena p {
+
+    font-size:1.5em;
+    text-align: left;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px #000;
+    letter-spacing: 3px;
+}
+
+.resena ul {
+    position: absolute;
+    top: -80%;
+    left: 0;
+    display: flex;
+    min-height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    gap: 5%;
+
+}
+
+.resena ul li {
+    font-size:.9em;
+    text-align: left;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px #000;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #FFF;
+    text-align: center;
+    padding: 1%;
+    margin-top: 10%;
+    
+}
+
+.comenzar {
+    
+    position: absolute;
+    width: 15em;
+    height: 3.5em;
+    background: none;
+    outline: none;
+    border: 2px solid #FFF;
+    color: #FFF;
+    text-shadow: 2px 2px #000;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    left: 70%;
+    top: 80%;
+    text-transform: uppercase;
+    font-size: 1em;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.comenzar:hover {
+    background: rgba(0, 0, 0, .6);
+}
+
+.blackLayer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    position: absolute;
+    left: 200%;
+    transition: .5s;
+}
+
+ @keyframes leftToRight {
+    0% {
+        left: 200%;
+    }
+
+    100% {
+        left: 0;
+    }
+} 
+
+.secondBox{
+    width: 70vw;
+    background-color: rgba(255, 35, 35, .7);
+    display: flex;
+}
+
+ .formulario {
+    position: relative;
+    z-index: 20;
+    left: 15%;
+    top: 20%;
+    height: 60%;
+    max-height: 400px;
+    width: 90%;
+    transition: all .5s;
+    
+    
+} 
+
+.formulario .allForm {
+    position: absolute;
+    width: 50%;
+    min-width: 350px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    box-shadow: 0px 0px 10px #CCC inset;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    
+}
+
+.allForm::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50%;
+    top: 0;
+    background-color: rgba(0, 0, 255, .1);
+    z-index: 0;
+}
+
+.allForm::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    background-color: rgba(0, 70, 90, .1);
+    z-index: 0;
+}
+
+.allForm label[for='habitaciones'] {
+    color: #FFF;
+    font-family: 'Poppins';
+    letter-spacing: 2px;
+    font-size: 1em;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+
+.allForm h3 {
+    color: #FFF;
+    font-family: 'Poppins';
+    letter-spacing: 2px;
+    font-size: 1em;
+    position: relative;
+    z-index: 10;
+    margin-top: 3%;
+}
+
+.button {
+    outline: none;
+    background-color: #58B646;
+    height: 35px;
+    width: 8em;
+    border-radius: 7px;
+    border: none;
+    color: #FFF;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    cursor: pointer;
+    z-index: 30;
+}
+
+input[id='input1'], input[id='input2'], input[id='habitaciones'] {
+    width: 10em;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    border: none;
+    outline: none;
+    z-index: 30;
+    font-size: 'Poppins';
+    font-weight: 600;
+    color: #000;
+}
+
+input[id='input1']::placeholder, input[id='input2']::placeholder, 
+input[id='habitaciones']::placeholder {
+    
+    color: #000;
+    opacity: .5;
+    font-family: 'Poppins';
+      
+}
+
+#habitaciones {
+    width: 7em;
+}
+
+.button:hover {
+    box-shadow: 0 0 15px rgba(17, 248, 17, .6);
+}
+
+.formulario .allForm:hover {
+    transform: translate(30%, -7%) scale(1.2);
+    z-index: 30;
+}
+
+.formulario::before {
+   
+    content: attr(data-content);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 2555, 255, 0.1);
+    box-shadow: 2px 2px 5px #FFF;
+    color: #FFF;
+    text-shadow: 1px 1px 2px #000;
+    letter-spacing: 2px;
+    font-size: 'Poppins';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    transition: .5s;
+    text-align: center;
+}
+
+
+.ani {
+    width: 45vw;
+    height: 100vh;
+    background: #FFF;
+    position: absolute;
+    top: -100%;
+    background: url(https://www.pngmart.com/files/2/Smartphone-PNG-File.png);
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x:  53%;
+    background-size: 100%;
+    background-color: #009FE3;
+    left: 50%;
+    transition: .5s;
+}
+
+
+.ani:hover {
+    transform: translate(-30%, 7%) scaleY(1.2) scaleX(1.2);
+}
+
+.ani span {
+    width: 37.5%;
+    left: 16%;
+    height: 60%;
+    top: 60%;
+    transform: translateY(-50%);
+    position: absolute;
+    display: block;
+    background: url(data:image/png;base64,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);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+@keyframes comingDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0;
+    }
+    
+}
+
+
+
+@keyframes hereIAM {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.gallery {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 10000;
+}
+
+.gallery h4 {
+    color: #FFF;
+    position: absolute;
+    z-index: 100;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins';
+    font-size: 1em;
+
+}
+
+
+
+@keyframes final {
+    0% {
+        left: 400%;
+    }
+    100% {
+        left: 0;
+    }
+    
+}
+
+.swiper {
+    margin-top: 10%;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, transparent, #006);
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide::before {
+    content: attr(data-name);
+    width: 10em;
+    height: 3em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFF;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFF;
+    text-shadow: 1px 1px 3px #000;
+  }
+
+
+  .swiper-slide::after {
+    content: attr(data-room);
+    width: 10em;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFF;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFF;
+    text-shadow: 2px 2px 3px #000;
+  }
+
+  .comeBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 15em;
+    height: 3.5em;
+    background: none;
+    outline: none;
+    border: 2px solid #FFF;
+    color: #FFF;
+    text-shadow: 2px 2px #000;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 77%;
+    text-transform: uppercase;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    transition: .5s;
+    z-index: 1000;
+  }
+
+  .comeBack:hover {
+    background: rgba(0, 0, 0, .6);
+}
+
+@media (max-width: 1200px) {
+
+    .resena ul {
+        top: -60%;
+    }
+
+    .comenzar {
+        top: 100%;
+        left: 0%;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .resena h2 {
+        font-size: 2em;
+    }
+
+    .resena p {
+        font-size: 1.3em;
+    }
+
+    .comenzar {
+        height: 4em;
+        width: 12em;
+        font-size: 1em;
+    }
+
+}
+ 
+
+@media(min-width: 250px) and (max-width: 975px) {
+    .ani span {
+        top: 75%;
+    }
+}
+
+
+@media(max-width: 600px){
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    .formulario:hover::before {
+        transform: translate(-4%, -3%) scale(1.1);
+        z-index: 30;
+    }
+
+
+
+    .formulario .allForm:hover {
+        transform: translate(-5%, -7%) scale(1.1);
+        z-index: 30;
+    }
+
+    .allForm label[for='habitaciones'] {
+        font-size: .9em;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 7vw;
+    }
+
+    .resena {
+        top: 40%;
+    }
+
+    .resena h2 {
+        font-size: 7vw;
+    }
+
+    .resena p {
+        font-size: 4vw;
+    }
+    .comenzar {
+        
+        width: 13em;
+        height: 5em;
+        font-size: 3vw;
+    }
+
+    .resena ul {
+        display: none;
+    }
+
+    .ani {
+        width: 100vw;
+        height: 100vh;
+        left: 30%;    
+        background-size: 112%;
+    }
+
+    @keyframes comingDown {
+        0% {
+            top: -100%;
+        }
+    
+        100% {
+            top: 0%;
+            
+        }
+        
+    }
+
+    .ani:hover {
+        transform: translate(-10%, 0%) scaleY(1.4) scaleX(1.4);
+    }
+ 
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="https://i.ibb.co/rFz41St/favicon-16x16.png" type="image/x-icon">
+
+  <title>Objects</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Desafio Latam Object Challenge</h1>
+    </header>
+    <section class="main">
+      <video src="assets/video/video.mp4" class="video" autoplay muted loop></video>
+    </section>
+
+    <div class="resena">
+      <h2>Encuentra la casa de tus sueños...</h2>
+      <p>
+        &nbsp Tenemos casas alrededor del mundo, explora por diferentes países
+        el lugar de tu agrado.
+      </p>
+      <ul>
+        <li>Sudamerica</li>
+        <li>Europa</li>
+        <li>Oceanía</li>
+        <li>Caribe</li>
+      </ul>
+      <button class="comenzar">Comenzar</button>
+    </div>
+
+    <div class="blackLayer">
+
+      <div class="secondBox">
+        <div class="formulario">
+          <div class="allForm">
+            <label for="habitaciones"> Escoge cantidad mínima de habitaciones </label>
+            <input type="text" id="habitaciones" placeholder="rooms">
+            <h3>
+              Escoge los metros cuadrados
+            </h3>
+            <input type="text" id="input1" placeholder="min-mts2">
+            <input type="text" id="input2" placeholder="max-mts2">
+            <button class="button" id="buscar">Buscar</button>
+          </div>
+        </div>
+        <div class="ani">
+
+          <span></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gallery">
+      <h4></h4>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        </div>
+      </div>
+      <div class="comeBack">Nueva busqueda</div>
+    </div>
+
+  </div>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="assets/javaScript/app.js"></script>
+</body>
+
+</html>
